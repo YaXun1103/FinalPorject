@@ -1,4 +1,7 @@
-
+.a{
+    
+    background-position: left top
+}
 .shell-top
 {
     width: 100%;
@@ -8,29 +11,40 @@
     transition: .2s;
     overflow: hidden;
     
-
-    width: 100%;
-  
-  
-  
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 700px;
-    height: 220px;
-    border: solid 10px rgba(255, 255, 255, 0.199);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  
-  
-  
+ 
     font: 100 70px 'font';
-    color: #ffffff;
+    color: #ffffff50;
     letter-spacing: 10px;
   
   
 }
+ 
+body .shell-top .word 
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    width: 700px;
+    height: 220px;
+    border: solid 10px rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+body .shell-top .word h2 
+{
+    font: 100 70px 'font';
+    color: #055040;
+    letter-spacing: 10px;
+}
 
+h2 span 
+{ display:inline-block; animation:float .2s ease-in-out infinite; }
+    @keyframes float {
+     0%,100%{ transform:none; }
+     33%{ transform:translateY(-1px) rotate(-2deg); }
+     66%{ transform:translateY(1px) rotate(2deg); }
+}
