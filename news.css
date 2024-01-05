@@ -1,0 +1,41 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(252, 230, 230, 0.953);
+    -webkit-backdrop-filter: blur(1px);
+            backdrop-filter: blur(1px);
+    z-index: 1000;
+    margin-top: auto;
+  }
+  .navbar .brand {
+    font-size: 24px;
+  }
+  .navbar .navbar-list {
+    display: flex;
+    list-style: none;
+  }
+  .navbar .list-item {
+    padding: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+  }
+  .navbar .list-item:hover, .navbar .list-item.active {
+    color: orange;
+  }
+  .navbar .justify-content-between {
+    justify-content: space-between;
+  }
+  .navbar .align-items-center {
+    align-items: center;
+  }
+  
+  .copywriting{
+    text-align: center;
+  }
+  .text{
+    background-color: blue;
+    text-align: left;
+  }
