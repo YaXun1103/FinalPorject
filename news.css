@@ -1,9 +1,12 @@
+body{
+  background-color: rgb(250, 235, 238);
+}
 .navbar {
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(252, 230, 230, 0.953);
+    background-color: rgba(240, 175, 175, 0.953);
     -webkit-backdrop-filter: blur(1px);
             backdrop-filter: blur(1px);
     z-index: 1000;
@@ -23,7 +26,7 @@
     color: black;
   }
   .navbar .list-item:hover, .navbar .list-item.active {
-    color: orange;
+    color: rgb(255, 0, 0);
   }
   .navbar .justify-content-between {
     justify-content: space-between;
@@ -36,6 +39,67 @@
     text-align: center;
   }
   .text{
-    background-color: blue;
+    float: left;
+    min-width: 65%;
     text-align: left;
+    box-sizing: border-box;
   }
+  .y{
+    float: left;
+    min-width: 30%;
+    text-align: left;
+    box-sizing: border-box;
+  }
+  span{
+    position: relative;
+  display: block;
+  cursor: pointer;
+  }
+  span {
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 4px;
+      bottom: -2px;
+      margin-top: -0.5px;
+      background: #fff;
+    }
+  
+    &:before {
+      left: -2.5px;
+    }
+  
+    &:after {
+      right: 2.5px;
+      background: #fff;
+      transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+  
+    &:hover {
+      &:before {
+        
+        width: 100%;
+        transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+  
+      &:after {
+        background: transparent;
+        width: 100%;
+        transition: 0s;
+      }
+    }
+  }
+table {
+border-collapse: collapse;
+margin-top: 20px;
+}
+th, td {
+ border: 1px solid #460606;
+text-align: left;
+padding: 8px;
+}
+th {
+ background-color: #ed6565;
+}
+
