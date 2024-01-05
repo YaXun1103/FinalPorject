@@ -1,5 +1,36 @@
-.shell-top{
 
-
+.shell-top
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgb(142, 228, 232), rgb(252, 252, 252));
+    position: absolute;
+    transition: .2s;
+    overflow: hidden;
     
+
+    width: 100%;
+  
+  
+  
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 220px;
+    border: solid 10px rgba(255, 255, 255, 0.199);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+  
+  
+    font: 100 70px 'font';
+    color: #ffffff;
+    letter-spacing: 10px;
+  
+  
 }
+
