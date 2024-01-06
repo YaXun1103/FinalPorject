@@ -19,6 +19,7 @@ body .shell-main-nav {
   margin-bottom: 18vh;
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6));
   backdrop-filter: blur(13px);
+  
 }
 
 body .shell-main-nav .logo {
@@ -59,7 +60,7 @@ body .shell-main-nav ul .nav-box {
   width: 115px;
   height: 5px;
   border-radius: 2px;
-  background-color: #b444ff;
+  background-color: #e9b078;
   z-index: -999;
   transition: .5s;
 }
