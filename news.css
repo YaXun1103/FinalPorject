@@ -3,6 +3,7 @@ body{
 }
 .navbar {
     position: sticky;
+    height: 80px;
     top: 0;
     left: 0;
     right: 0;
@@ -11,6 +12,7 @@ body{
             backdrop-filter: blur(1px);
     z-index: 1000;
     margin-top: auto;
+
   }
   .navbar .brand {
     font-size: 24px;
@@ -30,6 +32,7 @@ body{
   }
   .navbar .justify-content-between {
     justify-content: space-between;
+    margin-left:50px;
   }
   .navbar .align-items-center {
     align-items: center;
@@ -50,7 +53,7 @@ body{
   }
 
   span{
-    position: relative;
+  position: relative;
   display: block;
   cursor: pointer;
   }
@@ -193,17 +196,17 @@ footer{
 .info_top {
   display: flex;
   justify-content: space-around;
-  align-items: flex-start; /* 垂直方向上顶部对齐 */
+  align-items: flex-start; 
   flex-wrap: wrap;
   background-color: #39A7FF;
 
 }
 .info_form{
-  
   float: left;
     min-width: 50%;
     text-align: center;
     box-sizing: border-box;
+    padding: 15px;
 }
 .info_links{
   float: left;
@@ -271,5 +274,105 @@ button:hover {
   100%{
       color:#fff200;
       text-shadow: 0 0 5px #fff200, 0 0 3px #ff9f1a;
+  }
+}
+
+.middle {
+  margin:0;
+  padding:20px;
+  
+
+  width: 100%;
+  text-align: center;
+}
+
+.btn {
+  display:inline-block;
+  width:60px;
+  height: 60px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow:-5px 5px 15px -5px #f1f1f1; 
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s linear;
+}
+
+.btn i {
+  line-height: 60px;
+  font-size: 26px;
+  transition: 0.3s linear;
+}
+
+.btn:nth-child(1) i {
+  color:#3b5998;
+}
+
+.btn:nth-child(2) i {
+  color:#1da1f2;
+}
+
+.btn:nth-child(3) i {
+  color:#c32aa3;
+}
+
+.btn:nth-child(4) i {
+  color:#db4437;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn:hover i {
+  transform: scale(1.2);
+  color: #fff;
+}
+
+.btn:before {
+  content:"";
+  position:absolute;
+  width:120%;
+  height:120%;
+  transform: rotate(45deg);
+  left: -110%;
+  top:90%;
+}
+
+.btn:nth-child(1)::before {
+  background: #3b5998;
+}
+
+.btn:nth-child(2)::before {
+  background: #1da1f2;
+}
+
+.btn:nth-child(3)::before {
+  background: #c32aa3;
+}
+
+.btn:nth-child(4)::before {
+  background: #db4437;
+}
+
+.btn:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes aaa {
+  0% {
+    left: -110%;
+    top:90%;
+  }
+  50% {
+    left:10%;
+    top: -30%;
+  }
+  100% {
+    left: -10%;
+    top: -10%;
   }
 }
