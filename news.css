@@ -38,12 +38,14 @@ body{
 
   .text{
     text-align: center;
-   
+    text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
             padding: 10px;
             border: 2px solid #39A7FF; /* 調整邊框顏色 */
             border-radius: 8px; /* 調整邊框圓角 */
             background-color: #87C4FF; /* 調整背景顏色 */
-            color: #FFEED9; /* 調整文字顏色 */
+            color: #f3f1ee; /* 調整文字顏色 */
             font-size: 24px; /* 調整文字大小 */
   }
 
@@ -249,4 +251,25 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+.Inside{
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  border-color: #bfdfff;
+  border-style:solid;
+}
 
+.light{
+  text-align: center;
+  animation: lighting 1000ms alternate infinite ease;
+}
+@keyframes lighting{
+  0%,85%{
+      color: #4b4b4b;
+      text-shadow: none;
+  }
+  100%{
+      color:#fff200;
+      text-shadow: 0 0 5px #fff200, 0 0 3px #ff9f1a;
+  }
+}
