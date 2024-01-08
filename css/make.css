@@ -12,22 +12,22 @@ body .shell-main {
 body .shell-main-nav {
   width: 100%;
   height: 60px;
-  position: sticky;
+  position: fixed; /* 修改为 fixed */
   z-index: 999;
   top: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 18vh;
-  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6));
+  background-color: #f8ecce;
   backdrop-filter: blur(13px);
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 
 body .shell-main-nav .logo {
   width: 220px;
   height: 100%;
-  position: absolute;
-  left: 5%;
-  justify-content: space-between;
   display: flex;
   align-items: center;
 }
@@ -49,20 +49,6 @@ body .shell-main-nav ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  position: absolute;
-  right: 5%;
-}
-
-body .shell-main-nav ul .nav-box {
-  position: absolute;
-  bottom: 1px;
-  left: 0;
-  width: 115px;
-  height: 5px;
-  border-radius: 2px;
-  background-color: #e9b078;
-  z-index: -999;
-  transition: .5s;
 }
 
 body .shell-main-nav ul li {
@@ -79,3 +65,71 @@ body .shell-main-nav ul li a {
   text-align: center;
 }
 
+/* 新增 */
+body .shell-main-nav ul .list-item {
+  position: relative;
+}
+
+/* 新增 */
+body .shell-main-nav ul .list-item span::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s;
+}
+
+/* 新增 */
+body .shell-main-nav ul .list-item:hover span::before {
+  width: 100%;
+}
+
+span.a {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+span.a a {
+  position: relative;
+}
+
+span.a a:before,
+span.a a:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  bottom: -2px;
+  margin-top: -0.5px;
+  background: #fff;
+}
+
+span.a a:before {
+  left: -2.5px;
+}
+
+span.a a:after {
+  right: 2.5px;
+  background: #fff;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+span.a a:hover:before {
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+span.a a:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+span.a:hover {
+  color: #ff0404;
+}
