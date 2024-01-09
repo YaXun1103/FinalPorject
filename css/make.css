@@ -75,19 +75,18 @@ body .shell-main-nav ul .list-item span::before {
   content: "";
   position: absolute;
   top: 100%;
-  right: 50%;
+  left: 50%; /* 使用 left 来居中 */
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: #000;
+  background-color: #ffffff;
   transition: width 0.3s;
 }
 
-/* 新增 */
 body .shell-main-nav ul .list-item:hover span::before {
   width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-
 span.a {
   position: relative;
   display: block;
@@ -132,4 +131,21 @@ span.a a:hover:after {
 
 span.a:hover {
   color: #ff0404;
+}
+
+body .shell-main-nav .brand {
+  display: inline-block; 
+  line-height: 60px; 
+  margin-left: 50px;
+}
+
+body .shell-main-nav .brand .icon {
+  width: 5%;
+  height: auto; 
+  margin-right: 5px; 
+  vertical-align: middle; 
+}
+
+body .shell-main-nav .brand {
+  font-size: 24px; 
 }
