@@ -7,8 +7,89 @@
   <link rel="shortcut icon" href="img-xun/icon.png" type="image/x-icon">
   <link rel="stylesheet" href="HomePage.css">
   <style>
-    
+    @import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
 
+      html {
+        box-sizing: border-box;
+        font-size: 18px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      body {
+        background: #edf2f7;
+        color: #4a5568;
+        height: 100%;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      
+      details {
+        font-size: 1rem;
+        margin: 7em auto;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        width: 100%;
+        background: #f0baba;
+        border-radius: 8px;
+        position: relative;
+        width: 500px;
+
+        .summary-title {
+          user-select: none;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        .summary-content {
+          border-top: 1px solid #e2e8f0;
+          cursor: default;
+          padding: details-padding;
+          font-weight: 300;
+          line-height: 1.5;
+          margin-top: 20px;
+        }
+
+        summary {
+          list-style: none;
+          padding: details-padding;
+
+          &:focus {
+            outline: none;
+          }
+
+          &:hover .summary-chevron-up svg {
+            opacity: 1;
+          }
+        }
+
+        .summary-chevron-up svg {
+          opacity: 0.5;
+        }
+
+        .summary-chevron-up,
+        .summary-chevron-down {
+          pointer-events: none;
+          position: absolute;
+          top: 0.75em;
+          right: details-padding;
+          background: #ffffff;
+
+          svg {
+            display: block;
+          }
+        }
+
+        summary::-webkit-details-marker {
+          display: none;
+        }
+      }
 
   </style>
 </head>
@@ -50,31 +131,39 @@
                 <li><a href="#">Code.org</a></li>
                 <li><a href="#">因材網&學習拍</a></li>
             </ul>
+            
         </aside>
-
-        
-
-
     <div class="Inside"> <!--東西都做在這個DIV裡面才有白色背景-->
-      
         <div> <!--校長的話-->
             <img src="image/t.png" alt="">
         </div>
         <div>
-          <div>
-            <p>學校行政</p>
-            
-            
-          </div>
+          <details>
+            <summary>
+              <span class="summary-title">榮譽榜</span>
+              <div class="summary-chevron-up">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </summary>
+          
+            <div class="summary-content">
+              狂賀!!112年度新北市英語歌唱競賽市賽：恭喜四年孝班代表東區學校參賽,榮獲市賽佳作，感謝麗莉老師、郁宸老師辛苦的指導，感謝四孝孩子們認真的練習<br>
+              吉慶國小112學年度校內語文競賽獲獎名單<br>
+              狂賀!!!本校直笛社團榮獲新北市112年度學生音樂比賽優等，感謝田圻靖老師、藍毓雯老師指導，感謝孩子們為校爭光<br>
+              狂賀!!112年度新北市東區英語歌唱競賽：恭喜四年孝班代表學校參賽,榮獲特優佳績，感謝麗莉老師、郁宸老師辛苦的指導，感謝四孝孩子們認真的練習.<br>
+              吉慶國小112學年度第一學期第一次定期評量成績優異獎名單<br>
+              吉慶國小112學年度第一學期暑假作業優良獲獎名單</div>
+            <div class="summary-chevron-down">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
+              
+          </details>
         </div>
 <!--校園風景 我想弄成可以按左右換圖片的-->
         <div class="cover">
             <a href="#"><img src="image/gallery_5_9273590_79013.jpg" alt=""></a>
             <a href="#"><img src="image\gallery_6_1521721_79445.jpg" alt=""></a>
             <a href="#"><img src="image\gallery_7_2245172_79524.jpg" alt=""></a>
-        </div>
-
-        
+        </div>       
 <!--師資-->
 <h1>師資</h1>
 <div class="teacherbox">
@@ -100,10 +189,6 @@
   </div>
 </div>
 </div>    
-
-
-      
-
     <footer> <!--頁尾-->
         <div class="info_top">
       
