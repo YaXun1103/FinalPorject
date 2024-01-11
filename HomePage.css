@@ -228,11 +228,11 @@ body{
 
  /*白色框 可以改一下顏色或外框線*/
  .Inside{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
-    border-color: #bfdfff;
-    border-style:solid;
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  border-color: #bfdfff;
+  border-style:solid;
   }
 
   .cover{
@@ -282,12 +282,23 @@ filter: alpha(opacity=0);
         filter: alpha(opacity=0);
     }
 }
-
-
-
-
 .cover>a:nth-child(3) {
     -webkit-animation-delay: 10s;
             animation-delay: 10s;
 
+}
+.teacherbox {
+  display: flex;
+  justify-content: space-around; /* 可以調整成 space-between 或其他值，視情況而定 */
+  align-items: center; /* 調整對齊方式 */
+  flex-wrap: wrap; /* 如果內容太多，讓它換行顯示 */
+}
+
+.teacher {
+  width: 300px; /* 可以根據需要調整寬度 */
+  text-align: center;
+  margin: 10px; /* 可以根據需要調整間距 */
+  background-color: white;
+  border-color: #bfdfff;
+  border-style:solid;
 }
