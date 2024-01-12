@@ -385,4 +385,15 @@ h1 {
   width: 300px;
   text-align: center;
 }
+.video {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.video iframe {
+  width: 48%; /* 調整影片的寬度，以便在大多數螢幕上並排顯示 */
+  margin-bottom: 10px; /* 可以根據需要調整影片之間的間距 */
+}
 
